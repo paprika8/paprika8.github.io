@@ -56,7 +56,7 @@ class Apfelbaum extends Obj{
         switch(this.stat){
             case 0:
             case 1:
-                x = 1;
+                x = 0;
                 break;
             case 2:
             case 3:
