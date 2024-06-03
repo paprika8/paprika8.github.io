@@ -7,7 +7,17 @@ function start(i){
             document.getElementById("grid_game_screen").classList.add("inview");
             document.getElementById("onelvl").classList.remove("inview");
             document.getElementById("onelvl").getElementsByClassName("A2")[0].addEventListener("click", exit);
-            advice1(0);
+
+            let img = document.createElement("img");
+            img.classList.add("C1");
+            document.getElementById("onelvl").append(img);
+            img = document.createElement("img");
+            img.classList.add("C2");
+            document.getElementById("onelvl").append(img);
+            img = document.createElement("img");
+            img.classList.add("C3");
+            document.getElementById("onelvl").append(img);
+            advice1(1);
             break;
     }
     

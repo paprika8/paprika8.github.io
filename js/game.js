@@ -17,7 +17,7 @@ class Obj extends Point{
     draw(u, graphis, oneW){
         if(rotate)
             graphis.drawImage(this.img,
-                (height - this.y - 1) * oneW, this.x * oneW, oneW, oneW);
+                (GameManager.mapGame.height - this.y - 1) * oneW, this.x * oneW, oneW, oneW);
         else
             graphis.drawImage(this.img,
                 this.x * oneW, this.y * oneW, oneW, oneW);
@@ -73,7 +73,7 @@ class Apfelbaum extends Obj{
         if(rotate)
             graphis.drawImage(this.img,
                 64 * x, 0, 64, 128,
-                (height - this.y - 1) * oneW, (this.x - 1) * oneW, oneW, oneW * 2);
+                (GameManager.mapGame.height - this.y - 1) * oneW, (this.x - 1) * oneW, oneW, oneW * 2);
         else
             graphis.drawImage(this.img,
                 64 * x, 0, 64, 128,
@@ -369,6 +369,8 @@ function keyListener(evn){
         case "KeyD":
             inputValue = 0;
             break;
+        default:
+            return;
     }
     if(rotate){
         inputValue -= 90;
