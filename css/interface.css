@@ -1,0 +1,293 @@
+/*#region theme*/
+:root{
+    --backgroundcolor: rgba(206, 209, 53, 0.144);
+    --dark: var(--dark1);
+    --dark1: hsla(244, 85%, 35%, 0.7);
+    --dark2: hsla(244, 75%, 32%, 0.7);
+    --dark3: hsla(243, 10%, 20%, 0.7);
+    --dark4: hsla(244, 61%, 39%, 0.7);
+    --tcolor: #000261;
+    --border: #00570e93;
+    --box-color: #00cf2393;
+    --el-color: #c0e200;
+    --el-border: #00570e;
+}
+body{
+    background-image: url(../image/back1.png);
+}
+[data-theme="dark"] {                   
+    --backgroundcolor: var(--dark);
+}
+[data-theme="dark"][theme="1"]{    
+    --tcolor: #000000;               
+    --border: #00380993;
+    --box-color: #00b07593;
+    --el-color: #00b075;
+    --el-border: #003809;
+}
+[theme="1"]{
+    --tcolor: #000261;
+    --border: #007a1493;
+    --box-color: #00d62493;
+    --el-color: #00d624;
+    --el-border: #007a14;
+    body{
+        background-image: url(../image/back1.png);
+    }
+}
+[data-theme="dark"][theme="2"]{ 
+    --tcolor: #f2ff9e;                  
+    --border: #41270093;
+    --box-color: #6e421e93;
+    --el-color: #6e421e;
+    --el-border: #412700; 
+}
+[theme="2"]{
+    --tcolor: #000000;  
+    --border: #57340093;
+    --box-color: #cfb00093;
+    --el-color: #cfb000;
+    --el-border: #573400;    
+    --dark: var(--dark2);
+    body{
+        background-image: url(../image/back2.png);
+    }
+}
+[data-theme="dark"][theme="3"]{    
+    --tcolor: #000000;
+    --border: #3b3b3b93;
+    --box-color: #acacac93;
+    --el-color: #acacac;
+    --el-border: #3b3b3b; 
+}
+[theme="3"]{
+    --tcolor: #000000;
+    --border: #57575793;
+    --box-color: #cecece93;
+    --el-color: #cacaca;
+    --el-border: #525252; 
+    --dark: var(--dark3);
+    body{
+        background-image: url(../image/back3.png);
+    }
+}
+[data-theme="dark"][theme="4"]{
+    --tcolor: #000000;
+    --border: #39521e93;
+    --box-color: #78a32193;
+    --el-color: #78a321;
+    --el-border: #39521e; 
+}
+[theme="4"]{
+    --tcolor: #000457;
+    --border: #4c6d0093;
+    --box-color: #92c70093;
+    --el-color: #92c700;
+    --el-border: #4c6d00; 
+    --dark: var(--dark4);
+    body{
+        background-image: url(../image/back4.png);
+    }
+}
+/*#endregion*/
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-repeat:repeat;
+    background-blend-mode:overlay;
+    background-color: var(--backgroundcolor);
+}
+
+/*#region grids*/
+.conteiner_menu{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "A A"
+        "B1 B2"
+        "B3 B4"
+        "C C";
+}
+.conteiner_lvl{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-rows: 100px 1fr 1fr 1fr 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "A A"
+        "B1 B2"
+        "B3 B4"
+        "B5 B5"
+        "C C";
+}
+.conteiner_settings{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-rows: 100px 2fr 1fr 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "A A"
+        "B1 B2"
+        "B1 B3"
+        "C C";
+}
+.A{
+    grid-area: A;
+}
+.B1{
+    grid-area: B1;
+}
+.B2{
+    grid-area: B2;
+}
+.B3{
+    grid-area: B3;
+}
+.B4{
+    grid-area: B4;
+}
+.B5{
+    grid-area: B5;
+}
+.C{
+    grid-area: C;
+}
+/*#endregion*/
+
+.text{
+    color: var(--tcolor);
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    background-color: var(--el-color);
+    border-radius: 15px;
+    border: 4px var(--el-border) solid;
+    width: auto;
+}
+.view_block{
+    color: var(--tcolor);
+    padding: 20px;
+    margin: 3px;
+    border: var(--border) solid 5px;
+    background-color: var(--box-color);
+}
+.main_butt{
+    color: var(--tcolor);
+    border: var(--el-border) solid 5px;
+    background-color: var(--el-color);
+    border-radius: 30px;
+    background-size: cover;
+    align-self : center;
+    justify-self: center;
+    font-size: 15px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+}
+.main_butt:active{
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3)) grayscale(20%);
+    
+}
+label {
+    margin: 20px;
+    display: block;
+}
+.check_box{
+    width: 15px;
+    height: 15px;
+}
+.butt{
+    color: var(--tcolor);
+    align-self : center;
+    justify-self: center;
+    padding: 5px;
+    width: 80px;
+    height: 100px;
+}
+.game_butt{
+    color: var(--tcolor);
+    align-self : center;
+    justify-self: center;
+    aspect-ratio: 1/1;
+    padding: 10px;
+}
+.game_butt:active{
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3)) grayscale(20%);
+    
+}
+.lvl{
+    border: none;
+    background: url("../image/1.png");
+    background-size: cover;
+    color: blue;
+    font-size: 2em;
+}
+.lvl:active{
+    border: none;
+    background: url("../image/1cl.png");
+    background-size: cover;
+}
+[data-theme="dark"]{
+    .lvl{
+        border: none;
+        background: url("../image/1cl.png");
+        background-size: cover;
+        color: blue;
+        font-size: 2em;
+    }
+    .lvl:active{
+        border: none;
+        background: url("../image/1.png");
+        background-size: cover;
+    }
+}
+@media(min-width: 900px){
+    .conteiner_menu{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-content: center;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "A A A A"
+            "B1 B2 B3 B4"
+            "C C C C";
+    }
+    .conteiner_lvl{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-content: center;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "A A A A A"
+            "B1 B2 B3 B4 B5"
+            "C C C C C";
+    }
+    .main_butt{
+        align-self : center;
+        justify-self: center;
+        font-size: 17px;
+        padding: 5px;
+        width: 200px;
+        height: 200px;
+    }
+}

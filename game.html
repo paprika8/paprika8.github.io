@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+		<title>Игра</title>
+        <link href="css/interface.css" type="text/css" rel="stylesheet" media="screen">
+        <link href="css/game.css" type="text/css" rel="stylesheet" media="screen">
+        <script src="js/theme-module.js" type="text/javascript"></script>
+        <script src="js/transport.js" type="text/javascript"></script>
+        <script src="js/game.js" type="text/javascript"></script>
+        <script src="js/advice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="grid_game_screen">
+            <div class="A1">
+                <h1 class="text">Игра</h1><br>
+                <button class="text link_butt" value="index.html">Menu</button>
+            </div>
+            <div class="A2">
+                <span class="text">
+                    <span id="score"></span> /
+                    <span id="oldScore"></span>
+                </span>
+                <button id="pause" class="text game_butt">Pause</button>
+            </div>
+            <div id="canvasDiv">
+                <canvas id="canva"></canvas>
+            </div>
+                
+        </div>
+        <div id="onelvl" class="inview">
+            <div class="A1 text">Яблони</div>
+            <button class="A2 text">Закрыть</button>
+            <div class="B1"></div>
+            <div class="B2"></div>
+            <div class="B3"></div>
+            <div class="B4"></div>
+            <img class="C1"/>
+            <img class="C2"/>
+            <img class="C3"/>
+        </div>
+    </body>
+</html>

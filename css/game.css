@@ -1,0 +1,96 @@
+[data-theme="day"] {                   
+    --backgroundcolor: #5555557c;
+}
+#grid_game_screen{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "A1 NULL1 A2"
+        "canva canva canva"
+        "C1 NULL2 C2";
+}
+.A1{
+    grid-area: A1;
+}
+.A2{
+    grid-area: A2;
+    align-self : center;
+    justify-self: right;
+}
+.B1{
+    grid-area: B1;
+}
+.B2{
+    grid-area: B2;
+}
+.B3{
+    grid-area: B3;
+}
+.B4{
+    grid-area: B4;
+}
+.C1{
+    grid-area: C1;
+    align-self : center;
+    justify-self: center;
+}
+.C2{
+    grid-area: C2;
+    align-self : center;
+    justify-self: center;
+}
+.C3{
+    grid-area: C3;
+    align-self : center;
+    justify-self: center;
+}
+#canvasDiv{
+    width: 100%;
+    height: 100%;
+    grid-area: canva;
+    overflow: hidden;
+}
+.canvasW{
+    width: 100%;
+    height: auto;
+}
+.canvasH{
+    width: auto;
+    height: 100%;
+}
+#onelvl{
+    color: var(--tcolor);
+    padding: 10px;
+    background-color: var(--el-color);
+    border-radius: 15px;
+    border: 5px var(--el-border) solid;
+    display: grid;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    grid-template-rows: 100px 100px 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "A1 NULL1 NULL2 A2"
+        "B1 B2 B3 B4"
+        "NULL3 C1 C1 NULL4"
+        "NULL5 C2 C3 NULL6";
+}
+.inview{
+    display: none !important;
+}
+.actb{
+    background-color: var(--el-border);
+}
+.pasb{
+    background-color: var(--el-color);
+}
+img {
+    width: auto;
+    height: 100%;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+}
